@@ -278,7 +278,7 @@ def begin(inp):
     #print("   0, 退出")
     #h = int(input("请选择计算方式："))
     
-
+    history.clear()
     stris = inp[1]
 
     ###通过对stris正则表达式判断，得到h值#
@@ -287,17 +287,20 @@ def begin(inp):
     if h==1:
         comption.com1(stris)
         history.display()
+        return
 
     elif h==2:
         comption.com2(stris) 
         history.display()
+        return
 
     elif h==3:
         comption.com3(stris)
         history.display()
+        return
 
     else:
         print("-算式错误")
-        
+        return
     
-    history.clear()
+    
